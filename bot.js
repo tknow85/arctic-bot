@@ -12,15 +12,13 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  // If the message is "what is my avatar"
   if (message.content === 'avatar') {
-    // Send the user's avatar URL
     message.reply(message.author.avatarURL);
   }
 });
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'member-log');
+  const channel = member.guild.channels.find('name', 'general');
   if (!channel) return;
   channel.send(`Welcome to the server, ${member}`);
 });
