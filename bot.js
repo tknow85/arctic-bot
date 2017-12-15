@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
-    const msgContent = message.content.split(prefix).slice(1);
+    const msgContent = message.content.split(prefix).slice(1)[0];
     let msg = false;
     switch(msgContent) {
         case 'ping':
